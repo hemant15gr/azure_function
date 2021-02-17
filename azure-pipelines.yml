@@ -80,7 +80,7 @@ stages:
         deploy:
 
           steps:
-          - task: ManualValidation@3
+          - task: ManualValidation@1
             displayName: 'Manual Validation'
             inputs:
               notifyUsers: 'pratiksha.gaikwad@gslab.com'
