@@ -64,7 +64,7 @@ stages:
       artifact: drop
 
 - stage: Deploy
-  displayName: Deploy stage
+  displayName: Dev stage
   dependsOn: Build
   condition: succeeded()
 
@@ -80,6 +80,10 @@ stages:
         deploy:
 
           steps:
+          - task: ManualValidation@0
+            displayName: 'Manual Validation'
+            inputs:
+            notifyUsers: 'pratiksha.gaikwad@gslab.com'
           - task: AzureFunctionApp@1
             displayName: 'Azure functions app deploy'
             inputs:
