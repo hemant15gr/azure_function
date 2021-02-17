@@ -83,7 +83,7 @@ stages:
           - task: ManualValidation@0
             displayName: 'Manual Validation'
             inputs:
-            notifyUsers: 'pratiksha.gaikwad@gslab.com'
+              notifyUsers: 'pratiksha.gaikwad@gslab.com'
           - task: AzureFunctionApp@1
             displayName: 'Azure functions app deploy'
             inputs:
